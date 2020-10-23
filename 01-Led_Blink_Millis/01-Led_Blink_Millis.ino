@@ -1,5 +1,5 @@
 /*
- Name:		_01_Led_Blink_Timer.ino
+ Name:		_01_Led_Blink_Millis.ino
  Created:	22/10/2020 21:51:40
  Author:	JB
 */
@@ -38,6 +38,8 @@ void loop()
 	}
 
 
-	// ... but here we don't have some delay ... so the code is not blocking ... we can make comething else
-	Serial.print(".");
+	// ... but in that sketch we don't use delay() ... so the code is not blocking ... 
+	// the µC can make comething else 
+
+	
 }
