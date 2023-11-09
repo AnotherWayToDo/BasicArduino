@@ -1,0 +1,53 @@
+:sectnums: |,all|
+:toc: auto
+
+= Les bases de l'Arduino
+
+== Qu'est ce que l'Arduino ?
+
+=== Un écosystème avant tout
+
+**Arduino** est un écosystème complet permettant de découvrir l'électronique et la programmation en utilisant des composants simple à utiliser. +
+C'est une solution **open-source** facile d'accès et très largement documenter.
+
+Les avantages de l'Arduino sont les suivants:
+
+* **relativement économique**: les cartes Arduino (ou Arduino compatibles) sont relativement peu couteuse et assez complètes. On peut en trouver entre 10 et 50€ la carte
+* **cross-platform**: l'environement de dévelopement (IDE) est compatible Windows, MAC et Linux
+* **IDE simple et clair**: l'environement de développement qui permettra de créer le programme que l'on mettra sur la carte est simple et facile d'usage même pour les débutants
+* **open-source**: le fait que l'environement Arduino soit Open Source permet de trouver de nombreuses cartes, IDE ou composants compatibles Arduino.
+
+
+=== Vue globale
+
+image:./images/arduino_01.png["Vue globale"]
+
+
+
+== Les différentes cartes possibles
+
+=== De quoi se compose une carte Arduino ?
+
+Une carte Arduino (comme toute carte électronique) se compose des éléments suivants:
+
+* un **microcontrôleur (µC)** : c'est le cerveau de la carte. C'est lui qui pilote l'ensemble des actions qui ont été écrites dans le programme que l'on a poussé sur la cate 
+* des **ports d'entrées (pins in)** qui permettent au µC de faire de l'acquisition de données
+* des **ports de sorties (pins out)** qui permettant d'activer des ports ou d'anvoyer des signaux
+* d'un ou plusieurs **ports USB** pour communiquer avec le µC
+* en **option**, la carte peut également proposer:
+** des composants supplémentaires 
+** un module de communication (Wifi, ...)
+** ... ces composants supplémentaires peuvent nécessité un ensemble de librairies spécifiques pour fonctionner.
+
+
+image:./images/arduino_board.png["Carte Arduino"]
+
+
+=== Arduino officiel
+
+Le link:https://www.arduino.cc/en/hardware[site officiel] Arduino présente une large gamme de cartes.
+
+
+=== Arduino Compatible
+
+==== Adafruit
