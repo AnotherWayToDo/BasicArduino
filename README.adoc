@@ -96,6 +96,12 @@ Le link:https://www.arduino.cc/en/hardware[site officiel] Arduino présente une 
 
 * Adafruit (USA): https://www.adafruit.com/
 * Wemos (Chine): https://www.wemos.cc/en/latest/
+* Raspberry Pi Pico / Pico W (UK): https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html
+
+[NOTE]
+====
+Pour les Raspberry Pi Pico et Pico-W suivre le tutorial suivant pour la configuration de l'IDE pour supporter ces cartes.
+====
 
 #A COMPLETER#
 
