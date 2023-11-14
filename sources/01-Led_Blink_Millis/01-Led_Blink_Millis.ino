@@ -39,7 +39,7 @@ void loop()
 
 
 	// ... but in that sketch we don't use delay() ... so the code is not blocking ... 
-	// the µC can make comething else 
+	// the ÂµC can make comething else 
 
 	
 }

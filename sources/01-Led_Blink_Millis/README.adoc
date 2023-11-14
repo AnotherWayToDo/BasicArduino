@@ -1,0 +1,63 @@
+= Arduino Basic LED Blink
+
+== Objectif
+
+L'objectif de ce code est de présenter une autre façon d'organiser la structure au sein de la fonction loop. +
+Dans la version 00-basic_blink_millis, la fonction loop utilisait la fonction delay() qui est bloquante: le µC ne peut rien faire d'autre que patienter. +
+Ici nous allons "allouer" une tranche de temps que l'on va dédié à la gestion de la LED.
+
+A l'initialisation du µC on initialise les variables:
+
+* **ulLastMillis** qui stockera le temps où l'on est entré dans la tranche de gestino de LED
+* **ulCurrentMillis** qui stockera le temps actuel
+
+
+Dans la fonction **loop()**:
+
+* on met à jour la variable **ulCurrentMillis**
+* on check **(ulCurrentMillis - ulLastMillis) > ulTimeInterval**:
+** **si c'est vrai** alors on entre dans la tranche de temps allouer à la gestion de la LED.
+** **sinon** on passe et on fait le reste
+
+
+
+[source,c++]
+----
+unsigned long ulLastMillis = 0, ulCurrentMillis=0;		// Vars to handle elapsed time
+unsigned int uiLedStatus = LOW;
+const unsigned long ulTimeInterval = 1000;
+
+
+// La fonction setup est exécutée une seule fois
+void setup() 
+{
+	pinMode(LED_BUILTIN, OUTPUT);
+	Serial.begin(115200);
+
+}
+
+// La fonction loop est exécutuée encore et encore jusqu'à extinction du µC
+void loop() 
+{
+	ulCurrentMillis = millis();
+	
+	// Ce code sera exécuté toutes les ulTimeInterval millisecondes ...
+	if (ulCurrentMillis - ulLastMillis >= ulTimeInterval)
+	{
+		ulLastMillis = ulCurrentMillis;
+
+		if (uiLedStatus == HIGH)
+			uiLedStatus = LOW;
+		else
+			uiLedStatus = HIGH;
+
+
+		digitalWrite(LED_BUILTIN, uiLedStatus);
+	}
+
+ 
+	// Le µC peut faire autre chose 
+
+	
+}
+----
