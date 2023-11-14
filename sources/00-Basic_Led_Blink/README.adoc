@@ -1,0 +1,50 @@
+= Arduino Basic LED Blink
+
+== Objectif
+
+Faire glignoter la LED présente sur la carte ou s'il n'y en a pas, faire glignoter une LED externe. +
+Plus sérieusement, le fait de faire clignoter une LED est le premier pas vers l'usage d'un µC. Activer une LED consister à activer un **PORT** (PIN en anglais) du µC et énormément d'actions d'un µC - si ce n'est toutes - reposent sur le fait de lire ou écrire sur un port du µC. +
+Par conséquent arriver à faire clignoter une LED (cad l'allumer et l'éteindre) revient à activer et désactiver le port.
+
+
+== Schéma
+
+#TODO#
+
+== Code 
+
+Ce code permettra d'introduire les grandes lignes de la programmation Arduino. Deux fonctions sont importants: 
+
+* **setup()**: est une fonction qui sera appelé 1 seule fois au démarrage du µC. Elle permettra d'initialiser ou de construire tous ce qui sera utilisé dans le reste du code.
+* **loop()**: est le code qui se répètera tout au long du cycle du µC. Dès que le µC aura terminé la fonctionloop, il la ré-exécutera indéfiniment.
+
+
+[source,c++]
+----
+// The setup function runs once when you press reset or power the board
+void setup() 
+{
+	pinMode(LED_BUILTIN, OUTPUT);
+}
+
+
+// The loop function runs over and over again until power down or reset
+void loop() 
+{
+	digitalWrite(LED_BUILTIN, HIGH);
+	delay(500);
+	digitalWrite(LED_BUILTIN, LOW);
+	delay(500);
+  
+}
+----
+
+
+Dans la partie **setup()** on déclare dans quel mode on souhaite configurer le port pour piloter la LED. Ici on utilise un "raccourci" **LED_BUILTIN** pour spécifier la LED par défaut présente sur la carte.
+
+Dans la partie **loop()** on va passer notre temps à:
+
+* activer le port via digitalWrite(LED_BUILTIN, **HIGH**)
+* désactiver le port via digitalWrite(LED_BUILTIN, **LOW**)
+
+La fonction **Delay()** permet de bloquer le µC un certains nombres de ms avant de passer à l'action suivate.
