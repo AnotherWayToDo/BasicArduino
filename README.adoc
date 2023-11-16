@@ -11,7 +11,8 @@ Elle est découpée suivant les sections suivantes:
 * link:./02_programmation_arduino.adoc[Les bases de la programmation Arduino] (A VENIR)
 
 
-Example de code
+Exemples de code
 
-* link:./sources/00-Basic_Led_Blink/README.adoc[LED Blink (basic)]
-* link:./sources/01-Led_Blink_Millis/README.adoc[LED Blink (millis)]
+* link:./sources/01_basic_led_blink/README.adoc[01 - LED Blink (basic)]
+* link:./sources/02_led_blink_millis/README.adoc[02 - LED Blink (using millis)]
+* link:./sources/03_dht22/README.adoc[03 - Capteur de t° et humidité]

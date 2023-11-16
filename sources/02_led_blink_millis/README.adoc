@@ -1,3 +1,5 @@
+:sectnums: |,all|
+
 = Arduino Basic LED Blink
 
 == Objectif

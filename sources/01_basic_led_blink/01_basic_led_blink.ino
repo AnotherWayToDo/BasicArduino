@@ -1,9 +1,4 @@
-/*
- Name:		_00_Basic_Led_Blink.ino
- Created:	21/10/2020 22:25:01
- Author:	JB
-*/
-
+// ----------------------------------------------------------------------------
 // The setup function runs once when you press reset or power the board
 void setup() 
 {
@@ -11,6 +6,8 @@ void setup()
 }
 
 
+
+// ----------------------------------------------------------------------------
 // The loop function runs over and over again until power down or reset
 void loop() 
 {
