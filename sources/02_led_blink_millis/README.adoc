@@ -1,6 +1,6 @@
 :sectnums: |,all|
 
-= Arduino Basic LED Blink
+= Arduino LED Blink Using millis()
 
 == Objectif
 
