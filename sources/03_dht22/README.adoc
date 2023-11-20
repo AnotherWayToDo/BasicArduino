@@ -10,6 +10,15 @@ Le capteur que l'on souhaite utilisé (le DHT22)  est un capteur nécessitant un
 
 l'usage de librairie / package est quelque chose de très largement répandu en programmation. La programmaiton des µC n'y échappe pas.
 
+
+== Montage
+
+#TO UPDATE#
+
+image:./imgs/dht22_schema.jpg[format=png]
+
+
+
 == Détail du code
 
 === Import de la librairie
